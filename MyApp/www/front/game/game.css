@@ -1,0 +1,379 @@
+.navConnection{
+    display: none;
+}
+.navbar{
+    display: none;
+}
+table, td{
+    border: 1px solid #333;
+}
+.board{
+    margin : 3% auto 0 auto;
+    width: 50vw;
+    height: 50vw;
+    /* pour les petits écrans */
+    min-height: 200px;
+    min-width: 200px;
+    /* pour les grands écrans */
+    max-width: 600px;
+    max-height: 600px;
+
+    flex: 1; /* explanation below */
+    flex-basis: 50%;
+}
+
+.whoPlay{
+    width: 100%;
+    text-align: center;
+}
+
+table{
+    margin: auto;
+    width: 70%;
+    height: 60%;
+    background-color: #3f6dff;
+    border-radius: 4%;
+    padding:0.5%
+}
+.animate0 {
+    animation: animateFromTopToBottom 1s ease-in-out !important;
+    --translateY: -600%; /* Définition de la variable */
+}
+
+.animate1 {
+    animation: animateFromTopToBottom 1s ease-in-out !important;
+    --translateY: -500%; /* Définition de la variable */
+}
+
+.animate2 {
+    animation: animateFromTopToBottom 1s ease-in-out !important;
+    --translateY: -400%; /* Définition de la variable */
+}
+
+.animate3 {
+    animation: animateFromTopToBottom 0.7s ease-in-out !important;
+    --translateY: -300%; /* Définition de la variable */
+}
+
+.animate4 {
+    animation: animateFromTopToBottom 0.6s ease-in-out !important;
+    --translateY: -200%; /* Définition de la variable */
+}
+
+.animate5 {
+    animation: animateFromTopToBottom 0.5s ease-in-out !important;
+    --translateY: -100%; /* Définition de la variable */
+}
+
+
+@keyframes animateFromTopToBottom {
+    from {
+        transform: translateY(var(--translateY));
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+td {
+    border-radius: 50%;
+    border: 2px solid #134ac1;
+}
+
+.empty{
+    background-color: white;
+}
+
+.yellow{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 85.42%, rgba(255, 255, 255, 0) 100%), #f3ce1c;
+}
+
+.red{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 85.42%, rgba(255, 255, 255, 0) 100%), #f30000;
+}
+
+.game{
+    display:flex;
+    margin-top: 1vw;
+    height: 50vh;
+}
+
+/* Partie joueur qui joue */
+
+.info {
+    align-content: center;
+    text-align: center;
+    flex: 1; /* explanation below */
+    flex-basis: 25%;
+}
+
+#disk{
+    border-radius: 50%;
+    width: 6vw;
+    height: 6vw;
+    border-style: solid;
+    border-color: black;
+    margin: 0 auto;
+}
+
+#diskPlayerPlaying{
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    border-style: solid;
+    border-color: black;
+    margin: 0 auto;
+}
+
+.container{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+/* chat */
+
+.chat {
+    flex: 1; /* explanation below */
+    flex-basis: 25%;
+    width: 100%;
+    max-width: 100%;
+}
+.chatContainer{
+    height: 70%;
+    overflow: scroll;
+}
+
+.chatTitle{
+    height: 100%;
+}
+
+.buttonsChat{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.message{
+    margin-top: 3%;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 90%;
+    min-width: 90%;
+    border: 1px solid ;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}
+
+.messageByYou{
+    background-color: rgb(135, 135, 222);
+    border-color: rgb(67, 111, 255);
+}
+
+.messageByOther{
+    background-color: rgb(213, 213, 213);
+    border-color: rgb(157, 157, 157);
+}
+
+.infoMessage{
+    width: 100%;
+    display: flex;
+    margin-bottom: 1%;
+}
+
+.sender{
+    flex-basis: 50%;
+    font-weight: bold;
+}
+
+.messageContent{
+    margin: auto;
+}
+
+.date{
+    flex-basis: 50%;
+    text-align: right;
+}
+
+/* Prévisualisation */
+.line:over {
+    background-color: #333;
+}
+
+.previsualisationred{
+    background-color: rgba(255, 0, 0, 0.718);
+}
+
+.previsualisationyellow{
+    background-color: rgba(238, 255, 0, 0.853);
+}
+
+
+
+.popupContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup h1 {
+    font-size: 3vw;
+}
+
+.popup {
+    background-color: #fff;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 2;
+    padding-bottom: 2vw;
+    width:auto;
+    border-radius: 5px;
+    box-shadow: 0vw 0vw 10vw #ccc;
+    text-align: center;
+}
+
+.playAgainButton, .exitButton, .saveGameButton {
+    margin: auto;
+    padding: 1.5vw 3vw;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 10vw;
+    font-size: 1.5vw;
+}
+
+.buttonWithSpace{
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.playAgainButton {
+    background-color: #4CAF50;
+    color: #fff;
+}
+.exitButton {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.saveGameButton{
+    margin-top: 10%;
+    background-color: rgb(111, 152, 255);
+    color: #fff;
+}
+
+.token {
+    position: absolute;
+    transition: top 1s ease-in-out;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left:0 ;
+    top: 0;
+}
+
+.token.yellow {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 85.42%, rgba(255, 255, 255, 0) 100%), #f3ce1c;
+}
+
+.token.red {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 85.42%, rgba(255, 255, 255, 0) 100%), #f30000;}
+
+
+.sendMessageButton{
+    margin-top: 1%;
+    width: 90%;
+    background-color: #5da0f1;
+    border: 1px solid ;
+    border-radius: 5px;
+}    
+
+@media ( orientation : landscape ) and ( max-width : 800px ) {
+    nav {
+        display: none;
+    }
+
+    .game{
+        position: relative;
+        display:flex;
+        height: 100%;
+        width: 100%;
+    }
+
+    .board{
+        margin: 0;
+        width: 90%;
+        height: 90%;
+        /* pour les petits écrans */
+        min-height: 200px;
+        min-width: 200px;
+        /* pour les grands écrans */
+        max-width: 600px;
+        max-height: 600px;
+    
+        flex: 1; /* explanation below */
+        flex-basis: 50%;
+    }
+
+    table{
+        width: 100%;
+        height: 100%;
+        background-color: #3f6dff;
+        border-radius: 4%;
+        padding:0.5%
+    }
+
+    .container {
+        margin-top: 1%;
+        flex-direction: column;
+
+    }
+
+    .playAgainButton, .exitButton, .saveGameButton {
+        margin-top: 2%;
+    }
+
+    .popupContainer{
+        z-index: 10;
+    }
+
+    .chat{
+        position: relative;
+        display:flex;
+        height: 100%;
+        width: 100%;
+    }
+
+    /* chat */
+
+    .chat {
+        flex: 1; /* explanation below */
+        flex-basis: 25%;
+    }
+    .chatContainer{
+        height: 70%;
+        overflow: scroll;
+    }
+
+    .chatTitle{
+        margin: 0 auto 0 auto;
+        width: 100%;
+        align-items: center;
+        height: 80%;
+    }
+
+    .buttonsChat{
+        margin-top: 2%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+    }
+}

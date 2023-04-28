@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../ressources/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../ChatWithFriends/chatWithFriend.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li id="accueil"><a href="../index.html">Accueil</a></li>
+        <li id="nomSite"><a>Puissance 2²</a></li>
+        <div><a><i class="fa fa-bell"></i></a></div>
+        <li id="seConnecter">
+            <a id="login" href="../connexion/login.html"></a>
+
+            <ul id="sousMenuProfil">
+                <li id="profil"><a href="../connexion/profil.html">Profil</a></li>
+                <li id="social"><a href="../connexion/social.html"> Amis </a></li>
+                <li id="mygames"><a href="../gamesSaved/gamesSaved.html"> Mes parties </a></li>
+                <li id="deconnexion"><a>Déconnexion</a></li>
+            </ul>
+
+        </li>
+    </ul>
+</nav>
+<div class="navbar">
+    <a class="active" href="index.html"><i class="fa fa-home"></i></a>
+    <a class="active" href="#"> Puissance 2² </a>
+    <a class="active" id="seConnecter" href="connexion/login.html"><i class="fa fa-user"></i></a>
+</div>
+<div id="wrapper">
+    <div id="box">
+        <div class="friends">
+            <div class="friendsList" id="friendsList">
+
+            </div>
+        </div>
+        <div class="friendChat">
+            <div class="friendChatTitle" id="friendChat">
+                <div class="friendChatContainer" id="friendChatContainer">
+
+                </div>
+                <div class="friendChatInput" id="friendChatInput">
+                    <input type="text" id="message" placeholder="Message">
+                    <button id="send" onclick="sendMessageToFriend()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="arrow-wrapper">
+        <div class="arrow-right" id="toggle-btn"></div>
+    </div>
+</div>
+<div id="gameOverPopup" class="popupContainer hidden">
+    <div class="popup">
+        <h1>Fin de Partie le joueur <span id="colorWinner"> </span> a gagné</h1>
+        <button onclick="playAgain()" class="playAgainButton">Rejouer</button>
+        <button onclick="exit()" class="exitButton">Quitter</button>
+    </div>
+</div>
+<div id="equality" class="popupContainer hidden">
+    <div class="popup">
+        <h1>Egalité !</h1>
+        <br>
+        <br>
+        <div class="container">
+            <div class="buttonWithSpace">
+                <button onclick="playAgain()" class="playAgainButton">Rejouer</button>
+            </div>
+            <div class="buttonWithSpace">
+                <button onclick="exit()" class="exitButton">Quitter</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="game">
+    <div class="info">
+        <span>
+            Vous jouez :
+            <br>
+            <br>
+        </span>
+        <div id="disk" class="yellow"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <button onclick="playAgain()" class="playAgainButton">Rejouer</button>
+            <button onclick="exit()" class="exitButton">Quitter </button>
+        </div>
+    </div>
+    <div class="board">
+        <table id="table">
+            <!--Lignes 1-->
+            <tr class="line" id="5">
+                <td class="empty" id="05"></td>
+                <td class="empty" id="15"></td>
+                <td class="empty" id="25"></td>
+                <td class="empty" id="35"></td>
+                <td class="empty" id="45"></td>
+                <td class="empty" id="55"></td>
+                <td class="empty" id="65"></td>
+            </tr>
+            <!--Lignes 2-->
+            <tr class="line" id="4">
+                <td class="empty" id="04"></td>
+                <td class="empty" id="14"></td>
+                <td class="empty" id="24"></td>
+                <td class="empty" id="34"></td>
+                <td class="empty" id="44"></td>
+                <td class="empty" id="54"></td>
+                <td class="empty" id="64"></td>
+            </tr>
+            <!--Lignes 3-->
+            <tr class="line" id="3">
+                <td class="empty" id="03"></td>
+                <td class="empty" id="13"></td>
+                <td class="empty" id="23"></td>
+                <td class="empty" id="33"></td>
+                <td class="empty" id="43"></td>
+                <td class="empty" id="53"></td>
+                <td class="empty" id="63"></td>
+            </tr>
+            <!--Lignes 4-->
+            <tr class="line" id="2">
+                <td class="empty" id="02"></td>
+                <td class="empty" id="12"></td>
+                <td class="empty" id="22"></td>
+                <td class="empty" id="32"></td>
+                <td class="empty" id="42"></td>
+                <td class="empty" id="52"></td>
+                <td class="empty" id="62"></td>
+            </tr>
+            <!--Lignes 5-->
+            <tr class="line" id="1">
+                <td class="empty" id="01"></td>
+                <td class="empty" id="11"></td>
+                <td class="empty" id="21"></td>
+                <td class="empty" id="31"></td>
+                <td class="empty" id="41"></td>
+                <td class="empty" id="51"></td>
+                <td class="empty" id="61"></td>
+            </tr>
+            <!--Lignes 6-->
+            <tr class="line" id="0">
+                <td class="empty" id="00"></td>
+                <td class="empty" id="10"></td>
+                <td class="empty" id="20"></td>
+                <td class="empty" id="30"></td>
+                <td class="empty" id="40"></td>
+                <td class="empty" id="50"></td>
+                <td class="empty" id="60"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="chat">je suis le chat</div>
+</div>
+</body>
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script src="../../cordova.js"></script>
+<script src="../session.js"></script>
+<script src="game.js"></script>
+<script src="../ChatWithFriends/chatWithFriend.js"></script>
+</html>

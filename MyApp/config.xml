@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Puissance 2²</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <content src="front/index.html" />
+    <access origin="http://2puissance2.connect4.academy" />
+    <preference name="scheme" value="http" />
+    <allow-navigation href="http://2puissance2.connect4.academy/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+        <icon src="./www/img/logo.png" />
+    </platform>
+
+    <preference name="scheme" value="http" />
+    <preference name="hostname" value="2puissance2.connect4.academy" />
+    <plugin name="cordova-plugin-media" spec="6.1.0" />
+    <plugin name="cordova-plugin-device" spec="2.1.0" />
+    <plugin name="cordova-plugin-battery-status" spec="2.0.3" />
+    <plugin name="cordova-plugin-screen-orientation" spec="3.0.3" />
+    <plugin name="cordova-plugin-vibration" spec="3.1.1" />
+    <plugin name="cordova-plugin-whitelist" spec="1.3.5" />
+</widget>
+

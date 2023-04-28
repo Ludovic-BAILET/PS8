@@ -1,0 +1,187 @@
+
+#wrapper {
+    position: absolute;
+    width: 0;
+    height: 88vh;
+    z-index: 1;
+}
+
+#box {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-color: #ccc;
+    transition: all 0.5s ease-out;
+}
+
+#arrow-wrapper {
+    position: absolute;
+    top: 50%;
+    padding: 5px;
+    background-color: #010000;
+    /*transition: all 0.5s ease-out;*/
+}
+
+#box.expanded {
+    display: flex;
+    width: 100%;
+}
+
+#arrow-wrapper.expanded {
+    left: 100%;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+
+    border-right: 20px solid #8de698;
+}
+
+.arrow-left.has-new-message {
+    border-right: 20px solid #ff0000;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+
+    border-left: 20px solid #8de698;
+}
+
+.arrow-right.has-new-message {
+    border-left: 20px solid #ff0000;
+}
+
+.friends{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
+    background-color: #adadad;
+    border-right: 1px solid #000000;
+}
+
+.friend{
+    width: 100%;
+    font: 15px Arial, sans-serif;
+    background-color: #adadad;
+    border-bottom: 1px solid #e30606;
+    overflow: hidden;
+}
+
+.friend.has-new-message{
+    background-color: #ff0000;
+}
+
+.friend.selected{
+    background-color: #808080;
+}
+
+#friendChatInput {
+    position: relative;
+    right: 0;
+    width: 69%;
+    height: auto;
+}
+
+/* chat */
+
+
+.friendChat {
+    flex: 1; /* explanation below */
+    flex-direction: column;
+    flex-basis: 25%;
+}
+.friendChatContainer{
+    height: 90%;
+    overflow: scroll;
+}
+
+.friendChatTitle{
+    height: 100%;
+}
+
+.message{
+    margin-top: 3%;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 90%;
+    border: 1px solid ;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}
+
+#message{
+    max-width: 100%;
+}
+
+.messageByYou{
+    background-color: rgb(135, 135, 222);
+    border-color: rgb(67, 111, 255);
+}
+
+.messageByOther{
+    background-color: rgb(213, 213, 213);
+    border-color: rgb(157, 157, 157);
+}
+
+.infoMessage{
+    width: 100%;
+    display: flex;
+    margin-bottom: 1%;
+}
+
+.sender{
+    flex-basis: 50%;
+    font-weight: bold;
+}
+
+.messageContent{
+    margin: auto;
+}
+
+.date{
+    flex-basis: 50%;
+    text-align: right;
+}
+
+@media (orientation: portrait){
+    #wrapper, #arrow-wrapper, #box {
+        position:fixed;
+    }
+    #box {
+        height:84%
+    }   
+    
+    
+    #wrapper.expanded {
+        width: 100%;
+        border-right: 2px solid #010000;
+        border-bottom: 2px solid #010000;
+    }
+
+    #wrapper {
+        top: 8%;
+        height: calc(100vh - 122px);
+    }
+
+    #arrow-wrapper.expanded {
+        left: calc(100% - 25px);
+    }
+}
+
+@media (orientation: landscape){
+    #wrapper.expanded {
+        width: 30%;
+        border-right: 2px solid #010000;
+        border-bottom: 2px solid #010000;
+    }
+}

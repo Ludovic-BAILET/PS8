@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../ressources/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="connexionForm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <title>Inscription</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li id="accueil"><a href="../index.html">Accueil</a></li>
+        <li id="nomSite"><a>Puissance 2²</a></li>
+        <div class="bell">
+            <a>
+                <span id="bellIcon" class="material-symbols-outlined">
+                    notifications
+                </span>
+            </a>
+            <div class="notifications">
+                <div id="newFriend">
+                    <a id="textFriend" href="social.html">Vous avez une demande d'ami !
+                    </a>
+                </div>
+                <div id="newChallenge">
+                    <a id="textChallenge" href="../challenges/challenges.html">Vous avez un nouveau challenge !
+                    </a>
+                </div>
+            </div>
+        </div>        <li id="seConnecter">
+            <a id="login" href="login.html"></a>
+
+            <ul id="sousMenuProfil">
+                <li id="profil"><a href="profil.html">Profil</a></li>
+                <li id="social"><a href="social.html"> Amis </a></li>
+                <li id="challenges" ><a href="../challenges/challenges.html">Challenges</a></li>
+                <li id="mygames"><a href="../gamesSaved/gamesSaved.html"> Mes parties </a></li>
+                <li id="deconnexion"><a>Déconnexion</a></li>
+            </ul>
+
+        </li>
+    </ul>
+</nav>
+<div class="navbar">
+    <a class="active" href="../index.html"><i class="fa fa-home"></i></a>
+    <a class="active" href="#"> Puissance 2² </a>
+    <a class="active" id="seConnecter2" href="./login.html"><i class="fa fa-user"></i></a>
+</div>
+<div class="container-login">
+    <div class="wrap-login">
+        <form class="loginForm" id="loginForm" action="javascript:void(0);" method="post">
+            <span class="logoForm"> <img src="../ressources/logo.png" width="20%" > </span>
+
+            <div class="wrap-input validate-input">
+                <input class="input" type="text" name="username" id="username" placeholder="Identifiant">
+                <span class="focus"></span>
+            </div>
+
+            <div class="wrap-input validate-input">
+                <input class="input" type="email" name="mail" id="mail" placeholder="email">
+                <span class="focus"></span>
+            </div>
+
+
+            <div class="wrap-input validate-input">
+                <input class="input" type="password" name="password" id="password" placeholder="Mot de passe">
+                <span class="focus"></span>
+            </div>
+
+            <div class="wrap-input validate-input">
+                <input class="input" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmer mot de passe">
+                <span class="focus"></span>
+            </div>
+            <div id="error-message"></div>
+            <div class="container-login-form-btn">
+                <div class="wrap-login-form-btn">
+                    <div class="login-form-bgbtn"></div>
+                    <button class="login-form-btn"> CREER UN COMPTE </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="navConnection" id="navConnectionID">
+    <a class="active" href="profil.html"> <i class="fa fa-user"></i> </a>
+    <a class="active" id="friendIcon" href="social.html"><i class="fa fa-users"></i></a>
+    <a class="active" id="challengeIcon" href="../challenges/challenges.html"><img class="combat" src="../ressources/epee.png"/></a>
+    <a class="active" href="../gamesSaved/gamesSaved.html"><i class="fa fa-floppy-o"></i></a>
+    <a class="active" id="deconnexion2" href="#"><i class="fa fa-sign-out"></i></a>
+</div>
+</body>
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script src="../../cordova.js"></script>
+<script src="../session.js"></script>
+<script src="../notifications.js"></script>
+<script src="register.js"></script>
+</html>

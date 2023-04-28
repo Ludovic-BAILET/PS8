@@ -1,0 +1,228 @@
+@media (orientation: landscape){
+
+    html, 
+    body {
+      touch-action: pan-x pan-y; /* DÃƒÂ©sactive le zoom tactile */
+      user-select: none; /* DÃƒÂ©sactive la sÃƒÂ©lection de texte */
+      -webkit-text-size-adjust: none; /* DÃƒÂ©sactive le zoom sur iOS */
+      -ms-text-size-adjust: none; /* DÃƒÂ©sactive le zoom sur Windows Phone */
+      max-width: 100%; /* EmpÃƒÂªche le dÃƒÂ©passement de la largeur de l'ÃƒÂ©cran */
+      overflow-x: hidden; /* EmpÃƒÂªche le dÃƒÂ©filement horizontal */
+    }
+
+    .challenges-list{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin:auto;
+        min-height: 50vh;
+        border: solid;
+        border-color: black;
+
+    }
+
+    .container{
+        height: 10vw;
+        position: relative;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        border: solid;
+        border-color: black;
+        margin-bottom: 3%;
+    }
+
+    .imageLeft{
+        height: 10vw;
+        flex-basis: 25%;
+        border-right: solid;
+        border-color: black;
+    }
+
+    .rightPart{
+        width: 100%;
+        flex-basis: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .resumeGame {
+        background: linear-gradient(to right, #00ff5e 0%, #007bff 100%);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .main-content{
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+
+    title{
+        text-align: center;
+    }
+
+    body{
+        overflow-x: scroll;
+    }
+    body {
+        scrollbar-width: none; /* masquer la barre de dÃƒÂ©filement sur Firefox */
+    }
+    body::-webkit-scrollbar {
+        display: none; /* masquer la barre de dÃƒÂ©filement sur Chrome, Safari et Opera */
+    }
+
+
+    #succes{
+        width: 10000px;
+    }
+
+    #succesButton{
+        margin-right: 0;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 1em;
+        margin-top: 5vh;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width: 1024px){
+
+    .challenges-list{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin:auto;
+        min-height: 50vh;
+        border: solid;
+        border-color: black;
+
+    }
+
+    .container{
+        height: 14vw;
+        position: relative;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        border: solid;
+        border-color: black;
+        margin-bottom: 3%;
+    }
+
+    .imageLeft{
+        height: 100%;
+        flex-basis: 25%;
+        border-right: solid;
+        border-color: black;
+    }
+
+    .resumeGame {
+        background: linear-gradient(to right, #00ff5e 0%, #007bff 100%);
+        color: #fff;
+        padding: 3% 15%;
+        margin-top: 2%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+
+@media (orientation: portrait) and (max-width: 800px){
+
+    .challenges-list{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin:auto;
+        min-height: 50vh;
+        border: solid;
+        border-color: black;
+
+    }
+
+    .container{
+        height: 15vh;
+        position: relative;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        border: solid;
+        border-color: black;
+        margin-bottom: 3%;
+    }
+
+    .imageLeft{
+        height: 100%;
+        flex-basis: 25%;
+        border-right: solid;
+        border-color: black;
+    }
+
+    .rightPart{
+        width: 100%;
+        flex-basis: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .resumeGame {
+        background: linear-gradient(to right, #00ff5e 0%, #007bff 100%);
+        color: #fff;
+        padding: 5% 20%;
+        margin-top: 2%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .main-content{
+        width: 100%;
+        text-align: center;
+        position: relative;
+        margin-top: 10%;
+    }
+
+    title{
+        text-align: center;
+    }
+
+    body{
+        overflow-x: scroll;
+    }
+    body {
+        scrollbar-width: none; /* masquer la barre de dÃƒÂ©filement sur Firefox */
+    }
+    body::-webkit-scrollbar {
+        display: none; /* masquer la barre de dÃƒÂ©filement sur Chrome, Safari et Opera */
+    }
+
+
+    #succesButton{
+        margin-right: 0;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 1em;
+    }
+}

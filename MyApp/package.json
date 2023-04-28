@@ -1,0 +1,46 @@
+{
+  "name": "io.cordova.hellocordova",
+  "displayName": "HelloCordova",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "cordova": {
+    "platforms": [
+      "browser",
+      "android",
+      "ios"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-vibration": {},
+      "cordova-plugin-media": {
+        "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO"
+      },
+      "cordova-plugin-battery-status": {},
+      "cordova-plugin-device": {}
+    }
+  },
+  "devDependencies": {
+    "cordova-android": "^10.1.2",
+    "cordova-browser": "^6.0.0",
+    "cordova-ios": "^6.3.0",
+    "cordova-plugin-whitelist": "1"
+  },
+  "dependencies": {
+    "cordova-plugin-battery-status": "2.0.3",
+    "cordova-plugin-device": "2.1.0",
+    "cordova-plugin-file": "7.0.0",
+    "cordova-plugin-media": "6.1.0",
+    "cordova-plugin-screen-orientation": "3.0.3",
+    "cordova-plugin-vibration": "3.1.1"
+  }
+}

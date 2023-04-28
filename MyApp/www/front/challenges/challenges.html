@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="">
+<head>
+    <link rel="icon" href="../ressources/logo.png">
+    <title>Puissance 2²</title>
+    <meta meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="challenges.css">
+    <link rel="stylesheet" type="text/css" href="../ChatWithFriends/chatWithFriend.css">
+</head>
+<body>
+<nav>
+
+    <ul>
+        <li id="accueil"><a href="../index.html">Accueil</a></li>
+        <li id="nomSite"><a>Puissance 2²</a></li>
+        <div class="bell">
+            <a>
+                <span id="bellIcon" class="material-symbols-outlined">
+                    notifications
+                </span>
+            </a>
+            <div class="notifications">
+                <div id="newFriend">
+                    <a id="textFriend" href="../connexion/social.html">Vous avez une demande d'ami !
+                    </a>
+                </div>
+                <div id="newChallenge">
+                    <a id="textChallenge" href="./challenges.html">Vous avez un nouveau challenge !
+                    </a>
+                </div>
+            </div>
+        </div>        <li id="seConnecter">
+            <a id="login" href="../connexion/login.html"></a>
+
+            <ul id="sousMenuProfil">
+                <li id="profil"><a href="../connexion/profil.html">Profil</a></li>
+                <li id="social"><a href="../connexion/social.html"> Amis </a></li>
+                <li id="challenges" ><a href="challenges.html">Challenges</a></li>
+                <li id="mygames"><a href="../gamesSaved/gamesSaved.html"> Mes parties </a></li>
+                <li id="deconnexion"><a>Déconnexion</a></li>
+            </ul>
+
+        </li>
+    </ul>
+</nav>
+<div class="navbar">
+    <a class="active" href="../index.html"><i class="fa fa-home"></i></a>
+    <a class="active" href="#"> Puissance 2² </a>
+    <a class="active" id="seConnecter2" href="../connexion/login.html"><i class="fa fa-user"></i></a>
+</div>
+<div id="wrapper">
+    <div id="box">
+        <div class="friends">
+            <div class="friendsList" id="friendsList">
+
+            </div>
+        </div>
+        <div class="friendChat">
+            <div class="friendChatTitle" id="friendChat">
+                <div class="friendChatContainer" id="friendChatContainer">
+
+                </div>
+                <div class="friendChatInput" id="friendChatInput">
+                    <input type="text" id="message" placeholder="Message">
+                    <button id="send" onclick="sendMessageToFriend()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="arrow-wrapper">
+        <div class="arrow-right" id="toggle-btn"></div>
+    </div>
+</div>
+<div id="succes">
+    <button id="succesButton"> Clique la </button>
+</div>
+<div class="main-content">
+    <div class="title">
+        <h1>Challenges</h1>
+    </div>
+    <div id="challenges-list" class="challenges-list">
+</div>
+</div>
+
+<div class="navConnection" id="navConnectionID">
+    <a class="active" href="../connexion/profil.html"> <i class="fa fa-user"></i> </a>
+    <a class="active" id="friendIcon" href="../connexion/social.html"><i class="fa fa-users"></i></a>
+    <a class="active" id="challengeIcon" href="challenges.html"><img class="combat" src="../ressources/epee.png"/></a>
+    <a class="active" href="../gamesSaved/gamesSaved.html"><i class="fa fa-floppy-o"></i></a>
+    <a class="active" id="deconnexion2" href="#"><i class="fa fa-sign-out"></i></a>
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script src="../../cordova.js"></script>
+<script src="../session.js"></script>
+<script src="challenges.js" ></script>
+<script src="../notifications.js"></script>
+<script src="../ChatWithFriends/chatWithFriend.js"></script>
+</html>

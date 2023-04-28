@@ -1,0 +1,117 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:700';
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.flex {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a.bttn-delete {
+  color: rgba(255, 0, 0, 0.73);
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s ease all;
+}
+a.bttn-delete:hover {
+  color: #FFF;
+}
+a.bttn-delete:focus {
+  color: #FFF;
+}
+
+.bttn-delete {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0px;
+  border: 3px solid rgba(255, 0, 0, 0.73);
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.bttn-delete:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: rgba(255, 0, 0, 0.73);
+  z-index: -2;
+}
+.bttn-delete:hover:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.bttn-delete:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+
+
+a.bttn-challenge {
+  color: rgb(37, 115, 138);
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s ease all;
+}
+a.bttn-challenge:hover {
+  color: #FFF;
+}
+a.bttn-challenge:focus {
+  color: #FFF;
+}
+
+.bttn-challenge {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0px;
+  border: 3px solid rgb(37, 115, 138);
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.bttn-challenge:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: rgb(37, 115, 138);
+  z-index: -2;
+}
+.bttn-challenge:hover:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.bttn-challenge:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}

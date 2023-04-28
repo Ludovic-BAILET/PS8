@@ -1,0 +1,169 @@
+
+label {
+    float: left;
+}
+
+p {
+}
+
+#user-info {
+    font-family: Arial, sans-serif;
+    width: 50%; /* définir la largeur de la div */
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+label {
+    font-weight: bold;
+}
+#profilPage{
+    display: grid;
+    border: 2px solid #ea9c66;
+    margin: 40px 100px 100px 100px;
+    padding-top: 10px ;
+    position: relative;
+    z-index: 0;
+
+}
+
+body {
+    scrollbar-width: none; /* masquer la barre de défilement sur Firefox */
+    height: 1000vw;
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* masquer la barre de défilement sur Chrome, Safari et Opera */
+}
+
+#succes{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+#stat{
+    border: 2px solid #ea9c66;
+    padding-top: 2%;
+    margin-top: 2%;
+    display: inline-block;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+#editProfil{
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+.achievment{
+    margin-top: 1%;
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+.piechart {
+    display: inline-block;
+    width: 9vw;
+    height: 9vw;
+    border-radius: 50%;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ColorGreen{
+    color: green;
+    font: bold 1em Arial, sans-serif;
+}
+
+.ColorRed{
+    font: bold 1em Arial, sans-serif;
+    color: red;
+}
+
+.ColorBlue{
+    font: bold 1em Arial, sans-serif;
+    color: blue;
+}
+
+
+@media ( orientation : portrait ) and ( max-width : 800px ) {
+    
+    #profilPage{
+        display: grid;
+        margin: auto;
+        position: relative;
+        z-index: 0;
+        border: none;
+    }
+
+    #user-info {
+        width: 100%; /* définir la largeur de la div */
+    }
+
+    #id{
+        height: 100%;
+    }
+
+    #stat{
+        width: auto;
+        height: auto;
+        border: 2px solid #ea9c66;
+        padding: none;
+    }
+
+    .achievment{
+        margin-top: 20%;
+        margin-left: 2%;
+        width: 25vw;
+        
+        cursor: pointer;
+    }
+
+    .piechart {
+        display: inline-block;
+        width: 25vh;
+        height: 25vh;
+        border-radius: 50%;
+        border: 1px solid black;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #succes{
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 1em;
+        margin-bottom: 20%;
+    }
+
+}

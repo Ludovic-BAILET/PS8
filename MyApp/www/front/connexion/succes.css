@@ -1,0 +1,59 @@
+.Success {
+    display: flex; /* pour aligner les divs en ligne */
+    flex-wrap: wrap; /* pour permettre aux divs de se retourner à la ligne si nécessaire */
+    text-align: center;
+}
+
+h1{
+    Text-align: center;
+}
+.achievment {
+    display: inline-block; /* pour afficher les divs en ligne */
+    width: 20%; /* pour que chaque div utilise 25% de la largeur de la div parent */
+    box-sizing: border-box; /* pour inclure la largeur de la bordure et du padding dans la largeur */
+    padding: 10px; /* pour ajouter de l'espace entre les divs */
+    text-align: center; /* pour centrer le contenu à l'intérieur de chaque div */
+    margin-top: 40px;
+}
+
+p.bloqué{
+    filter: blur(5px);
+}
+
+.imageAchievement {
+    width: 40%;
+    min-width: 20px;
+    max-width: 100px;
+}
+
+p{
+    font-size: 2vw;
+}
+
+@media ( orientation : portrait ) and ( max-width : 800px ) {
+    
+    .achievment {
+        display: inline-block; /* pour afficher les divs en ligne */
+        width: 50%; /* pour que chaque div utilise 25% de la largeur de la div parent */
+        box-sizing: border-box; /* pour inclure la largeur de la bordure et du padding dans la largeur */
+        padding: 10px; /* pour ajouter de l'espace entre les divs */
+        text-align: center; /* pour centrer le contenu à l'intérieur de chaque div */
+        margin-top: 40px;
+    }
+
+    p{
+        font-size: 4vw;
+    }
+
+    .Success{
+        padding-bottom: 20%;
+    }
+    .navConnection{
+        display: block;
+    }
+
+    h1{
+        Text-align: center;
+        margin-top: 20%;
+    }
+}

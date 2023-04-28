@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mongoDb:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  nodeJs:
+    image: name:nodeJs
+    ports:
+      - "80:8000"
+
